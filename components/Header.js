@@ -11,11 +11,11 @@ const Header = () => {
         <div className='flex items-center justify-between'>
           {/* logo */}
           <div className='hidden sm:block mt-10'>
-            <Link href={'/'}> <Image className='avatar ring-primary ring-offset-base-100 w-16 rounded-full ring ring-offset-2   ' src={'/jlogo.jpeg'} width={220} height={48} alt='' priority={true}></Image></Link>
+            {/* <Link href={'/'}> <Image className='avatar ring-primary ring-offset-base-100 w-16 rounded-full ring ring-offset-2   ' src={'/jlogo.jpeg'} width={220} height={48} alt='' priority={true}></Image></Link> */}
           </div>
           {/* social */}
           <div className='' >
-            <Social></Social>
+           
           </div>
         </div>
       </div>

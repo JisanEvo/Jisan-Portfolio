@@ -11,7 +11,7 @@ import {easeInOut, motion} from "framer-motion"
 import {fadeIn} from "../variants"
 const Home = () => {
   return (
-    <div className="bg-primary/60 h-full ">
+    <div className="bg-black h-full ">
   {/* text */}
   <div  className="w-full h-full bg-gradient-to-r from-primary/10 via black/30">
 <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto">
@@ -21,16 +21,26 @@ const Home = () => {
   initial='hidden'
   animate='show'
   exit='hidden'
-className="h1">Transforming Ideas <br/> <span className="text-accent">
-  Digital Reality </span></motion.h1>
+className="h1">Jisan Mahmud <br/> </motion.h1>
   {/* subtitles */}
+ <motion.h2
+  variants={fadeIn('down',0.3)}
+  initial='hidden'
+  animate='show'
+  exit='hidden'
+className="h2 -mt-8"
+
+ >
+ <span className="text-accent text-2xl">
+ Mern Stack Web Developer</span>
+ </motion.h2>
   <motion.p
-    variants={fadeIn('down',0.3)}
+    variants={fadeIn('down',0.4)}
     initial='hidden'
     animate='show'
     exit='hidden'
-  className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16">
-I am Mern Stack Web Developer . Specially i like to develop a website for my client . thank you very much.
+  className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 text-white">
+ Mastered explaining very complex topics in a simple manner. My Skills at Html5 ,Css, Css Frame Works,Vanila Java Scripts, React Js, Node Js Express Js and Mongo Db.
   </motion.p>
   {/* btn */}
   <div className="flex justify-center xl:hidden relative">
@@ -49,7 +59,7 @@ I am Mern Stack Web Developer . Specially i like to develop a website for my cli
   {/* image */}
   <div className="w-[1200px] h-full absolute right-0 bottom-0">
     {/* {bg image  } */}
-<div className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0 "> </div>
+{/* <div className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0 "> </div> */}
 {/* particles */}
 <ParticlesContainer></ParticlesContainer>
 {/* avater image  */}

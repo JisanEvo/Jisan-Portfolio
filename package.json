@@ -9,12 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@next/font": "^13.4.4",
+    "@react-navigation/native": "^6.1.18",
+    "aos": "^2.3.4",
+    "emailjs": "^4.0.3",
     "framer-motion": "^10.12.16",
     "next": "13.4.3",
     "react": "18.2.0",
     "react-countup": "^6.4.2",
     "react-dom": "18.2.0",
+    "react-hot-toast": "^2.4.1",
     "react-icons": "^4.8.0",
     "react-tsparticles": "^2.9.3",
     "swiper": "^9.4.0",
@@ -23,6 +28,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
+    "daisyui": "^4.12.10",
     "eslint": "8.41.0",
     "eslint-config-next": "13.4.3",
     "postcss": "^8.4.23",
