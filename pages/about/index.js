@@ -30,14 +30,14 @@ const aboutData = [
       {
         title: 'Web Development',
         icons: [
-          <FaHtml5 />,
-          <FaCss3 />,
-          <FaJs />,
-          <FaReact />,
+          <FaHtml5 key='html'/>,
+          <FaCss3 key='css' />,
+          <FaJs key='js'/>,
+          <FaReact key='react'/>,
           // <SiNextdotjs />,
-          <SiNodedotjs></SiNodedotjs>,
-          <SiExpress/>,
-          <SiMongodb/>,
+          <SiNodedotjs key='node'></SiNodedotjs>,
+          <SiExpress key='express'/>,
+          <SiMongodb key='mongodb'/>,
         ],
       },
       // {

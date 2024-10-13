@@ -5,7 +5,7 @@ const index = () => {
     <div className="bg-black min-h-screen"  >
       <div className="lg:mx-16 mx-5 ">
         <div
-         className='flex gap-14 py-14'
+          className='flex gap-14 py-14'
         >
           <div className=" lg:w-[50%]">
             <div className="flex items-center">
@@ -89,11 +89,11 @@ const index = () => {
         </div>
       </div>
 
-{/* project2 */}
+      {/* project2 */}
 
-<div className="lg:mx-16 mx-5 ">
+      <div className="lg:mx-16 mx-5 ">
         <div
-        className='flex gap-14 py-'
+          className='flex gap-14 py-'
         >
           <div className=" lg:w-[50%]">
             <div className="flex items-center">
