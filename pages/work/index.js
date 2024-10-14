@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+
 const index = () => {
   return (
     <div className="bg-[#171717] min-h-screen"  >

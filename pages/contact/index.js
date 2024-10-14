@@ -80,7 +80,8 @@ import Socials from '../../components/Socials';
 import Link from 'next/link';
 import ParticlesContainer from '../../components/ParticlesContainer';
 // import { Link } from 'react-router-dom';
-
+import { motion } from 'framer-motion';
+import { fadeIn } from '../../variants';
 const Contact = () => {
 
     const form = useRef();
@@ -103,77 +104,97 @@ const Contact = () => {
     };
 
     return (
-      <div className='bg-[#171717] min-h-screen '>
-                 {/* <ParticlesContainer></ParticlesContainer> */}
+        <div className='bg-[#171717] min-h-screen '>
+            {/* <ParticlesContainer></ParticlesContainer> */}
 
-          <div className="py-20 bg-[#171717] min-h-screen px-7"  id="contact " >
+            <div className="py-20 bg-[#171717] min-h-screen px-7" id="contact " >
 
-        <h2 className="text-5xl text-[#f3004b] fancy text-center pt-5 pb-1 mx-auto">Contact Me</h2>
-        <div className='flex justify-center items-center '>
-        <Socials></Socials>
-       </div>
-        <div data-aos="fade-right" className="flex flex-col lg:flex-row justify-center  h-full my-20 aos-init aos-animate">
-            <div className="text-white flex flex-col gap-5 lg:w-[30%]">
-                <div className="bg-[#131313] text-center p-5 rounded text-lg w-3/4  mx-auto h-60  flex flex-col justify-center items-center">
-                    {/* <a href="https://www.facebook.com/JisanEvo" className="inline-block text-4xl"><FaFacebookSquare /></a> */}
-                    <h3>Resume Adding Soon</h3>
+              <motion.div
+              variants={fadeIn('down', 0.2)}
+              initial="hidden"
+              animate="show"
+              exit="hidden"
 
+              >
+              <h2 className="text-5xl text-[#f3004b] fancy text-center pt-5 pb-1 mx-auto">Connect Me</h2>
+                <div className='flex justify-center items-center '>
+                    <Socials></Socials>
                 </div>
-                <div className="bg-[#131313] text-center p-5 rounded text-lg w-3/4  mx-auto h-60 flex flex-col justify-center items-center">
-                    <p className="inline-block text-4xl">
-                        <a href="https://wa.link/hh02xx" target="_blank" rel="noopener noreferrer">
-                            <FaWhatsappSquare />
-                        </a>
-                    </p>
-                    <a href="https://wa.link/hh02xx" target="_blank" rel="noopener noreferrer">
-                        <h3>WhatsApp</h3>
-                    </a>
-                    <a href="https://wa.link/hh02xx" target="_blank" rel="noopener noreferrer">
-                        <p>+8801303-552174</p>
-                    </a>
-                    <a href="https://wa.link/hh02xx" target="_blank" rel="noopener noreferrer">
-                        <h3 className="text-[#f3004b] font-bold">send message</h3>
-                    </a>
+              </motion.div>
+                <div data-aos="fade-right" className="flex flex-col lg:flex-row justify-center  h-full my-20 aos-init aos-animate">
+                    <motion.div
+                        variants={fadeIn('right', 0.4)}
+                        initial="hidden"
+                        animate="show"
+                        exit="hidden"
+
+                        className="text-white flex flex-col gap-5 lg:w-[30%]">
+                        <div className="bg-[#131313] text-center p-5 rounded text-lg w-3/4  mx-auto h-60  flex flex-col justify-center items-center">
+                            {/* <a href="https://www.facebook.com/JisanEvo" className="inline-block text-4xl"><FaFacebookSquare /></a> */}
+                            <h3>Resume Adding Soon</h3>
+
+                        </div>
+                        <div className="bg-[#131313] text-center p-5 rounded text-lg w-3/4  mx-auto h-60 flex flex-col justify-center items-center">
+                            <p className="inline-block text-4xl">
+                                <a href="https://wa.link/hh02xx" target="_blank" rel="noopener noreferrer">
+                                    <FaWhatsappSquare />
+                                </a>
+                            </p>
+                            <a href="https://wa.link/hh02xx" target="_blank" rel="noopener noreferrer">
+                                <h3>WhatsApp</h3>
+                            </a>
+                            <a href="https://wa.link/hh02xx" target="_blank" rel="noopener noreferrer">
+                                <p>+8801303-552174</p>
+                            </a>
+                            <a href="https://wa.link/hh02xx" target="_blank" rel="noopener noreferrer">
+                                <h3 className="text-[#f3004b] font-bold">send message</h3>
+                            </a>
+                        </div>
+                    </motion.div>
+                    <motion.div
+                        variants={fadeIn('left', 0.6)}
+                        initial="hidden"
+                        animate="show"
+                        exit="hidden"
+
+                        className="lg:w-[60%] mt-10 lg:mt-0 aos-init aos-animate">
+                        <form ref={form} onSubmit={sendEmail} className='grid grid-cols-1 sm:grid-cols-2 gap-6 mt-12'>
+                            <input
+                                className="p-3 text-xl bg-transparent border-2 rounded border-[#f3004b]"
+                                type="text"
+                                name="from_name"
+                                placeholder="Enter your name"
+                                required
+                            />
+
+                            <input
+                                className="p-3 text-xl bg-transparent border-2 rounded border-[#f3004b]"
+                                type="email"
+                                name="from_email"
+                                placeholder="Enter your email"
+                                required
+                            />
+
+                            <input
+                                className='sm:col-span-2 w-full px-6 py-[18px] p-3 text-xl bg-transparent border-2 rounded border-[#f3004b]'
+                                type="text"
+                                name="subject"
+                                placeholder="Type your subject"
+                                required
+                            />
+
+                            <textarea
+                                className='sm:col-span-2 w-full p-3 text-xl bg-transparent border-2 rounded border-[#f3004b]'
+                                name="message"
+                                rows="6"
+                                placeholder='Write your message'></textarea>
+
+                            <button type='submit' className='text-dark hover:text-white px-5 py-[18px]  border-green hover:bg-green duration-300 shadow-xl hover:shadow-green/20 w-full inline-block sm:col-span-2 text-xl bg-transparent border-2 rounded border-[#f3004b]'>Send message</button>
+                        </form>
+                    </motion.div>
                 </div>
-            </div>
-            <div className="lg:w-[60%] mt-10 lg:mt-0 aos-init aos-animate">
-                <form ref={form} onSubmit={sendEmail} className='grid grid-cols-1 sm:grid-cols-2 gap-6 mt-12'>
-                    <input
-                        className="p-3 text-xl bg-transparent border-2 rounded border-[#f3004b]"
-                        type="text"
-                        name="from_name"
-                        placeholder="Enter your name"
-                        required
-                    />
-
-                    <input
-                        className="p-3 text-xl bg-transparent border-2 rounded border-[#f3004b]"
-                        type="email"
-                        name="from_email"
-                        placeholder="Enter your email"
-                        required
-                    />
-
-                    <input
-                        className='sm:col-span-2 w-full px-6 py-[18px] p-3 text-xl bg-transparent border-2 rounded border-[#f3004b]'
-                        type="text"
-                        name="subject"
-                        placeholder="Type your subject"
-                        required
-                    />
-
-                    <textarea
-                        className='sm:col-span-2 w-full p-3 text-xl bg-transparent border-2 rounded border-[#f3004b]'
-                        name="message"
-                        rows="6"
-                        placeholder='Write your message'></textarea>
-
-                  <button type='submit' className='text-dark hover:text-white px-5 py-[18px]  border-green hover:bg-green duration-300 shadow-xl hover:shadow-green/20 w-full inline-block sm:col-span-2 text-xl bg-transparent border-2 rounded border-[#f3004b]'>Send message</button>
-                </form>
             </div>
         </div>
-    </div>
-      </div>
     );
 };
 
