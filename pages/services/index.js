@@ -2,7 +2,10 @@ import Image from "next/image";
 const Services = () => {
   return (
     <div className="min-h-screen bg-black">
-      <h1 className="tetx-center font-sans text-xl text-center py-24">Skills are Adding quickly</h1>
+      <p
+
+        className="text-4xl text-[#f3004b] fancy text-center pt-5 pb-1 w-48 mx-auto border-b-4 border-[#f3004b]  border-double rounded-full mb-8 hover:bg-white ">Skills</p>
+      <p className="text-white text-xl font-serif text-center mb-8">This are the technologies I have worked with</p>
       <div className="grid grid-cols-3 container mx-auto gap-6">
         {/* HTML */}
         <div className="shadow-md hover:scale-105 duration-500 py-2 rounded-lg shadow-orange-500 hover:shadow-lg hover:shadow-red-600 flex flex-col items-center">
@@ -26,7 +29,7 @@ const Services = () => {
           </figure>
           <div className="card-body items-center text-center">
             <h2 className="card-title">CSS</h2>
-  </div>
+          </div>
         </div>
         {/* Botstarp */}
 

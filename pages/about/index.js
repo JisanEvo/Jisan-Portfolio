@@ -107,7 +107,7 @@ const About = () => {
     <Circles></Circles>
     {/* avatar img */}
     <motion.div
-      variants={fadeIn('right', 0.2)}
+     variants={fadeIn('right', 0.2)}
       initial="hidden"
       animate="show"
       exit="hidden"
@@ -124,7 +124,7 @@ const About = () => {
           animate="show"
           exit="hidden"
           className='h2'>  Captivating <span className='text-accent'>stories</span> birth magnificent design.</motion.h2> */}
-        <motion.p
+          <motion.p
           variants={fadeIn('right', 0.4)}
           initial="hidden"
           animate="show"
@@ -173,7 +173,12 @@ const About = () => {
       </div>
       {/* info  */}
       <div className='flex flex-col w-full xl:max-w-[48%] h-[480px]'>
-        <div className='flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4 font-sans'>
+        <motion.div
+         variants={fadeIn('left', 0.8)}
+         initial="hidden"
+         animate="show"
+         exit="hidden"
+        className='flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4 font-sans'>
           {aboutData.map((item, itemIndex) => {
             return <div key={itemIndex}
               className={`cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white   mt-4  after:absolute after:-bottom-1 after:left-0 ${index === itemIndex ? 'text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300' : ''
@@ -183,9 +188,15 @@ const About = () => {
               {item.title}
             </div>
           })}
-        </div>
+        </motion.div>
 
-        <div className=' py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center  xl:items-start'>
+        <motion.div
+         variants={fadeIn('left', 0.10)}
+         initial="hidden"
+         animate="show"
+         exit="hidden"
+
+        className=' py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center  xl:items-start'>
           {aboutData[index].info?.map((item, itemIndex) => {
             return <div key={itemIndex} className='flex-1 flex flex-xol md:flex-row max-w-max gap-x- items-center text-white/60 '>
               {/* title */}
@@ -200,7 +211,7 @@ const About = () => {
               </div>
             </div>
           })}
-        </div>
+        </motion.div>
       </div>
 
     </div>
