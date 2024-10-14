@@ -100,10 +100,11 @@ import Circles from '../../components/Circles';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../../variants';
 import CountUp from 'react-countup';
+import ParticlesContainer from '../../components/ParticlesContainer';
 
 const About = () => {
   const [index, setIndex] = useState(0)
-  return <div className='h-full bg-black py-32 text-center xl:text-left'>
+  return <div className='h-full bg-[#171717] py-32 text-center xl:text-left'>
     <Circles></Circles>
     {/* avatar img */}
     <motion.div
@@ -113,9 +114,13 @@ const About = () => {
       exit="hidden"
       className='hidden xl:flex absolute bottom-0 -left-[50px] '>
       <Avatar></Avatar>
+
+
     </motion.div>
     <div className='container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6'>
       {/* text  */}
+
+      <ParticlesContainer></ParticlesContainer>
       <div className='flex-1 flex flex-col justify-center'>
 
         {/* <motion.h2

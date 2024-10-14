@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 const index = () => {
   return (
-    <div className="bg-black min-h-screen"  >
+    <div className="bg-[#171717] min-h-screen"  >
       <div className="lg:mx-16 mx-5 ">
         <div
           className='flex gap-14 py-14'

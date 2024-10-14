@@ -78,6 +78,7 @@ import { FaFacebookSquare, FaWhatsappSquare } from 'react-icons/fa';
 import toast from 'react-hot-toast';
 import Socials from '../../components/Socials';
 import Link from 'next/link';
+import ParticlesContainer from '../../components/ParticlesContainer';
 // import { Link } from 'react-router-dom';
 
 const Contact = () => {
@@ -103,6 +104,7 @@ const Contact = () => {
 
     return (
       <div className='bg-[#171717] min-h-screen '>
+                 {/* <ParticlesContainer></ParticlesContainer> */}
 
           <div className="py-20 bg-[#171717] min-h-screen px-7"  id="contact " >
 
